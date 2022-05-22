@@ -41,7 +41,7 @@ class _DownloadDialogState extends State<DownloadDialog> {
     final dir = await getApplicationDocumentsDirectory();
     print(dir);
     // return "${dir.path}/$filename";
-    return "/sdcard/download/$filename.pdf";
+    return "/sdcard/download/$filename";
   }
 
   @override
@@ -54,7 +54,7 @@ class _DownloadDialogState extends State<DownloadDialog> {
 
   @override
   Widget build(BuildContext context) {
-    String downloadingprogress = (progress.toInt() * 100).toString();
+    String downloadingprogress = (progress * 100).toStringAsFixed(2);
     return AlertDialog(
       backgroundColor: Colors.white,
       content: Column(mainAxisSize: MainAxisSize.min, children: [

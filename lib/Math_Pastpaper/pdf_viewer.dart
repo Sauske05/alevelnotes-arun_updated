@@ -45,6 +45,7 @@ class _PDFViewerState extends State<PDFViewer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(widget.title),
         actions: [
           IconButton(
               onPressed: () async {

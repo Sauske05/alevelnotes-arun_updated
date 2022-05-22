@@ -44,6 +44,7 @@ class _PDFViewerState extends State<PDFViewer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(widget.title),
         actions: [
           IconButton(
               onPressed: () async {
@@ -59,7 +60,7 @@ class _PDFViewerState extends State<PDFViewer> {
                       Expanded(
                           child: TextButton(
                         onPressed: (() {
-                          OpenFile.open("/sdcard/download/${widget.title}.pdf");
+                          OpenFile.open("/sdcard/download/${widget.title}");
                         }),
                         child: const Text('Open'),
                       ))
