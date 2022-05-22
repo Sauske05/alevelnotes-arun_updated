@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
 import 'package:playstore_app/uiwidgets/custom_place_holder_contact_support.dart';
 import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 import 'package:playstore_app/theme/colors.dart';
-import 'package:playstore_app/datas/user_profile.dart';
 import 'package:playstore_app/theme/padding.dart';
 import 'package:playstore_app/uiwidgets/clipper.dart';
 import 'package:playstore_app/uiwidgets/custom_category_card%20copy.dart';
 import 'package:playstore_app/uiwidgets/custom_category_card.dart';
 import 'package:playstore_app/uiwidgets/custom_heading.dart';
 import 'package:playstore_app/uiwidgets/custom_promotion_card.dart';
-import 'package:playstore_app/uiwidgets/custom_search_field.dart';
-import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
 import 'package:provider/provider.dart';
 import 'package:playstore_app/theme/theme_provider.dart';
 
@@ -78,14 +76,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       left: appPadding, right: appPadding),
                   child: Column(
                     children: <Widget>[
-                      const SizedBox(height: spacer - 30),
+                      const SizedBox(height: spacer - 40),
 
                       //heading
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const CustomHeading(
-                            title: 'Hi, <user/> !',
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children:const [
+                           CustomHeading(
+                            title: 'Hi, learner !',
                             subTitle: 'Let\'s start learning.',
                             color: textWhite,
                           ),
@@ -121,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const CustomPromotionCard(),
             const SizedBox(
-              height: spacer - 5,
+              height: spacer +5,
             ),
             // const CustomButtonBox(title: 'abc'),
             // const SizedBox(

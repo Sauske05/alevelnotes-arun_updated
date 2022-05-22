@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
                   const SizedBox(height: 30),
                   const Text(
                     '''Developed By Arun Joshi
-               and Shishir Poudel''',
+and Shishir Poudel''',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: 20, color: Color.fromARGB(255, 231, 132, 20)),
