@@ -1,4 +1,4 @@
-package com.example.playstore_app
+package com.alish.alevelnotes
 
 import io.flutter.embedding.android.FlutterActivity
 

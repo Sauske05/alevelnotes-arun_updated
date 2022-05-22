@@ -1,4 +1,5 @@
 import 'package:playstore_app/datas/account_menu_json.dart';
+import 'package:playstore_app/screens/SyllabusScreen.dart';
 import 'package:playstore_app/theme/colors.dart';
 import 'package:playstore_app/theme/padding.dart';
 import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
@@ -70,19 +71,56 @@ class AccountPageState extends State<AccountPage> {
                   padding: const EdgeInsets.only(bottom: spacer),
                   child: Column(
                     children: [
-                      CustomTitle(
-                        title: accountmenujson[index]['title'],
-                        extend: false,
-                      ),
+                      // CustomTitle(
+                      //   title: accountmenujson[index]['title'],
+                      //   extend: false,
+                      // ),
                       const SizedBox(height: smallSpacer),
                       Column(
                         children: List.generate(
                           data.length,
                           (j) {
-                            return CustomPlaceHolderContactSupport(
-                              title: data[j]['title'],
-                              isSwitch: data[j]['isSwitch'],
-                            );
+                            // return CustomPlaceHolderContactSupport(
+                            //   title: data[j]['title'],
+                            //   isSwitch: data[j]['isSwitch'],
+                            var size = MediaQuery.of(context).size;
+                            return InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => data[j]['route'],
+                                      ));
+                                },
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  width: size.width,
+                                  height: size.width * .1,
+                                  margin:
+                                      const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: <Widget>[
+                                      Text(
+                                        data[j]['title'],
+                                        style: TextStyle(
+                                          fontSize: 20.0,
+                                          color: Provider.of<ThemeProvider>(
+                                                          context)
+                                                      .themeMode ==
+                                                  ThemeMode.dark
+                                              // ? Color.fromARGB(255, 62, 61, 61)
+                                              ? const Color.fromARGB(
+                                                  255, 255, 255, 255)
+                                              : const Color.fromARGB(
+                                                  255, 0, 0, 0),
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ],
+                                  ),
+                                ));
                           },
                         ),
                       )
@@ -99,7 +137,7 @@ class AccountPageState extends State<AccountPage> {
             child: Text(
               'V1.0.1',
               style: TextStyle(
-                fontSize: 14.0,
+                fontSize: 16.0,
                 color: Provider.of<ThemeProvider>(context).themeMode ==
                         ThemeMode.dark
                     // ? Color.fromARGB(255, 62, 61, 61)
@@ -116,11 +154,11 @@ class AccountPageState extends State<AccountPage> {
               '''Developed By Arun Joshi
     and Shishir Poudel''',
               style: TextStyle(
-                fontSize: 14.0,
+                fontSize: 18.0,
                 color: Provider.of<ThemeProvider>(context).themeMode ==
                         ThemeMode.dark
                     // ? Color.fromARGB(255, 62, 61, 61)
-                    ? Color.fromARGB(255, 0, 255, 170)
+                    ? const Color.fromARGB(255, 0, 255, 170)
                     : Colors.blue,
               ),
             ),

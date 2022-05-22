@@ -141,13 +141,13 @@ class _RootAppState extends State<RootApp> {
                               curve: Curves.easeIn,
                               child: Container(
                                 height: 3.0,
-                                width: 16.0,
+                                width: 20.0,
                                 decoration: BoxDecoration(
                                     color: primary,
                                     borderRadius: BorderRadius.circular(100)),
                               ),
                             )
-                          : Container(
+                          :const SizedBox(
                               height: 5.0,
                               width: 20.0,
                             ),

@@ -11,7 +11,7 @@ class CustomTitle extends StatelessWidget {
     required this.title,
     this.route = '/404',
     this.extend = true,
-    this.fontSize = 20.0,
+    this.fontSize = 2.0,
     this.arg,
   }) : super(key: key);
 

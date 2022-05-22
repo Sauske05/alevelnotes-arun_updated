@@ -16,7 +16,7 @@ class CustomHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
+          
       children: [
         Text(
           title,
@@ -29,8 +29,8 @@ class CustomHeading extends StatelessWidget {
         const SizedBox(height: 5.0),
         Text(
           subTitle,
-          style:  TextStyle(
-            color: Color.fromARGB(255, 255, 255, 255),
+          style: TextStyle(
+            color: color,
             fontSize: 16.0,
           ),
         ),
