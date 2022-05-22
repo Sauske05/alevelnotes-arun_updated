@@ -22,7 +22,6 @@ class _RootAppState extends State<RootApp> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Provider.of<ConnectivityProvider>(context, listen: false).startMonitoring();
   }

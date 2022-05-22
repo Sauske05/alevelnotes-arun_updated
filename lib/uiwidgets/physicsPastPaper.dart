@@ -75,7 +75,7 @@ class PhysicsPastPaperWidget extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => PhysicsPastPaper()));
+                              builder: (context) => const PhysicsPastPaper()));
                     },
                     child: const Text(
                       'Open',

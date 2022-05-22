@@ -32,7 +32,6 @@
 //   }
 // }
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:playstore_app/theme/colors.dart';
@@ -44,7 +43,10 @@ class PhysicsPastPaper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Physics'),
+        centerTitle: true,
+      ),
       body: ListView.builder(
         itemBuilder: ((context, index) {
           var year = Map.pastpapers[index]['Year'];
