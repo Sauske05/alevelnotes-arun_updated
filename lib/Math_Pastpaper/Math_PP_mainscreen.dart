@@ -11,7 +11,10 @@ class MathPastPaper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Mathematics'),
+        centerTitle: true,
+      ),
       body: ListView.builder(
         itemBuilder: ((context, index) {
           var year = Map.Mathspastpapers[index]['Year'];

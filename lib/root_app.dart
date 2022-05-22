@@ -22,7 +22,6 @@ class _RootAppState extends State<RootApp> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Provider.of<ConnectivityProvider>(context, listen: false).startMonitoring();
   }
@@ -55,6 +54,7 @@ class _RootAppState extends State<RootApp> {
 
   Widget getBody() {
     List<Widget> pages = [
+      // const HelpSupport(),
       const MyHomePage(),
       const FormulaScreen(),
       const Notes(),
