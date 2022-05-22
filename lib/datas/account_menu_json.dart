@@ -1,6 +1,7 @@
 import 'package:playstore_app/screens/AboutUs.dart';
 import 'package:playstore_app/screens/Physics_mainscreen.dart';
 import 'package:playstore_app/screens/SyllabusScreen.dart';
+import 'package:playstore_app/screens/help_support.dart';
 import 'package:playstore_app/screens/terms_and_conditions.dart';
 
 List accountmenujson = [
@@ -14,7 +15,7 @@ List accountmenujson = [
       },
       {
         'title': 'Help and Support',
-        'route':const PhysicsScreen()
+        'route':const HelpSupport()
         
       },
       {
