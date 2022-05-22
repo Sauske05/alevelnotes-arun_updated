@@ -55,6 +55,7 @@ class _RootAppState extends State<RootApp> {
 
   Widget getBody() {
     List<Widget> pages = [
+      // const HelpSupport(),
       const MyHomePage(),
       const FormulaScreen(),
       const Notes(),
