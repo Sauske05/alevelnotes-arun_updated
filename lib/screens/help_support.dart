@@ -31,6 +31,7 @@ class _HelpSupportState extends State<HelpSupport> {
       'name': userdetail['name'],
       'email': userdetail['email'],
       'query': userdetail['query'],
+      'date': DateTime.now().toString()
     });
     _namecontroller.clear();
     _emailcontroller.clear();
