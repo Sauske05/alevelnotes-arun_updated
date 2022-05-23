@@ -11,6 +11,8 @@ import 'package:playstore_app/uiwidgets/custom_heading.dart';
 import 'package:playstore_app/uiwidgets/custom_promotion_card.dart';
 import 'package:provider/provider.dart';
 import 'package:playstore_app/theme/theme_provider.dart';
+import 'package:playstore_app/models/connectivity_provider.dart';
+import 'no_internet.dart';
 
 // import 'package:playstore_app/themes/theme_manager.dart';
 
@@ -23,6 +25,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
+  void initState() {
+    super.initState();
+    Provider.of<ConnectivityProvider>(context, listen: false).startMonitoring();
+  }
+
+  @override
   Widget build(BuildContext context) {
     // final text = Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
     //     ? 'DarkTheme'
@@ -32,8 +40,17 @@ class _MyHomePageState extends State<MyHomePage> {
             // ? Color.fromARGB(255, 62, 61, 61)
             ? const Color.fromARGB(255, 62, 61, 61)
             : Colors.blue.shade600;
+    return Consumer<ConnectivityProvider>(builder: ((context, value, child) {
+      if (value.isOnline != null) {
+        return value.isOnline! ? pageUI(appbarColor) : const NoInternet();
+      }
+      return pageUI(appbarColor);
+    }));
+    // return pageUI(appbarColor);
+  }
+
+  Widget pageUI(appbarColor) {
     return Scaffold(
-      // backgroundColor: background,
       extendBodyBehindAppBar: false,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
@@ -44,7 +61,6 @@ class _MyHomePageState extends State<MyHomePage> {
           elevation: 0.0,
         ),
       ),
-      // drawer: const MainDrawer(),
       body: getBody(),
     );
   }
@@ -81,8 +97,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       //heading
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children:const [
-                           CustomHeading(
+                        children: const [
+                          CustomHeading(
                             title: 'Hi, learner !',
                             subTitle: 'Let\'s start learning.',
                             color: textWhite,
@@ -119,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const CustomPromotionCard(),
             const SizedBox(
-              height: spacer +5,
+              height: spacer + 5,
             ),
             // const CustomButtonBox(title: 'abc'),
             // const SizedBox(
