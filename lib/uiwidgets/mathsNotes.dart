@@ -6,12 +6,21 @@ import 'package:playstore_app/datas/mathsNotesUI.dart';
 
 import 'package:flutter_svg/svg.dart';
 
-class MathsNotes extends StatelessWidget {
+class MathsNotes extends StatefulWidget {
   const MathsNotes({Key? key}) : super(key: key);
 
   @override
+  State<MathsNotes> createState() => _MathsNotesState();
+}
+
+class _MathsNotesState extends State<MathsNotes> {
+  @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    return padding(size);
+  }
+
+  Widget padding(size) {
     return Padding(
       padding: const EdgeInsets.only(left: appPadding, right: appPadding),
       child: Stack(

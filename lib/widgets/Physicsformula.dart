@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/models/Formulapdf.dart';
+import '../models/FormulapdfPhysics.dart';
 
 class PhysicsFormula extends StatelessWidget {
   const PhysicsFormula({Key? key}) : super(key: key);

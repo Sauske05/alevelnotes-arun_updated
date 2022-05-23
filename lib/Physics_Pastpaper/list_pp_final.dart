@@ -68,17 +68,6 @@
 //   }
 // }
 
-
-
-
-
-
-
-
-
-
-
-
 import 'package:flutter/material.dart';
 import 'package:playstore_app/Physics_Pastpaper/pdfviewer.dart';
 import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
@@ -95,7 +84,9 @@ class ListPP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('$year $month'),
+      ),
       body: SingleChildScrollView(
         child: Column(
             // spread operator used.
@@ -112,6 +103,7 @@ class ListPP extends StatelessWidget {
     );
   }
 }
+
 class Answer extends StatelessWidget {
   final String title;
   final String month;

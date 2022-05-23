@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playstore_app/screens/no_internet.dart';
 import 'package:playstore_app/uiwidgets/mathsNotes.dart';
 import 'package:playstore_app/uiwidgets/physicsNotes.dart';
 import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
@@ -8,24 +9,45 @@ import 'package:playstore_app/theme/theme_provider.dart';
 
 import 'package:playstore_app/theme/padding.dart';
 
-class Notes extends StatelessWidget {
+import '../models/connectivity_provider.dart';
+
+class Notes extends StatefulWidget {
   const Notes({super.key});
+
+  @override
+  State<Notes> createState() => _NotesState();
+}
+
+class _NotesState extends State<Notes> {
+  @override
+  void initState() {
+    super.initState();
+    Provider.of<ConnectivityProvider>(context, listen: false).startMonitoring();
+  }
 
   @override
   Widget build(BuildContext context) {
     final appbarColor =
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
-            // ? Color.fromARGB(255, 62, 61, 61)
             ? const Color.fromARGB(255, 62, 61, 61)
             : Colors.blue.shade600;
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: appbarColor,
-        title: const Text('Notes'),
-        actions: [ChangeThemeButtonWidget()],
-      ),
-      body: getBody(),
-    );
+
+    return pageUI();
+  }
+
+  Widget pageUI() {
+    return Consumer<ConnectivityProvider>(builder: ((context, value, child) {
+      if (value.isOnline != null) {
+        return value.isOnline!
+            ? Scaffold(
+                body: getBody(),
+              )
+            : const NoInternet();
+      }
+      return Scaffold(
+        body: getBody(),
+      );
+    }));
   }
 
   Widget getBody() {

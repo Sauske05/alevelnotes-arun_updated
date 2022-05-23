@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:dio/dio.dart';
@@ -27,19 +28,22 @@ class _PDFcreatorState extends State<PDFcreator> {
       print(url);
       setState(() {});
     } on firebase_storage.FirebaseException catch (e) {
-      return showAboutDialog(context: context, children: [
-        AlertDialog(
-          content: const Text('Something went wrong'),
-          actions: [
-            TextButton(
-              onPressed: (() {
-                Navigator.of(context).pop();
-              }),
-              child: const Text('Okay'),
-            )
-          ],
-        )
-      ]);
+      print(e);
+      return showDialog(
+          context: context,
+          builder: ((context) {
+            return AlertDialog(
+                title: Text('An error occured!'),
+                content: const Text('Something went wrong'),
+                actions: [
+                  TextButton(
+                    onPressed: (() {
+                      Navigator.of(context).pop();
+                    }),
+                    child: const Text('Okay'),
+                  )
+                ]);
+          }));
     }
   }
 

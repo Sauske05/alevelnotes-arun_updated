@@ -19,20 +19,7 @@ class _ReaderScreenMathState extends State<ReaderScreenMath> {
     final title = routeArgs['title'];
 
     return Scaffold(
-        appBar: AppBar(title: Text(title!), actions: [
-          IconButton(
-            onPressed: () async {
-              await showDialog(
-                  context: context,
-                  builder: (context) => DownloadDialog(title));
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content: Text('File succesfully added to downloads!'),
-                duration: Duration(seconds: 4),
-              ));
-            },
-            icon: const Icon(Icons.download),
-          ),
-        ]),
+        appBar: AppBar(title: Text(title!), actions: []),
         body: PDFcreator(
           title: title,
         ));

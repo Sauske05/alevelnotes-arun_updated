@@ -15,7 +15,9 @@ class MathListPP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('$year $month'),
+      ),
       body: SingleChildScrollView(
         child: Column(
             // spread operator used.

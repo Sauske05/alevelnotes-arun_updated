@@ -36,6 +36,10 @@ class _HelpSupportState extends State<HelpSupport> {
     _namecontroller.clear();
     _emailcontroller.clear();
     _querycontroller.clear();
+
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+            'Your response has been recorded. We will get back to you soon enough.')));
   }
 
   String? validateEmail(String? value) {
@@ -44,9 +48,9 @@ class _HelpSupportState extends State<HelpSupport> {
         r"{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]"
         r"{0,253}[a-zA-Z0-9])?)*$";
     RegExp regex = RegExp(pattern);
-    if (value == null || value.isEmpty || !regex.hasMatch(value))
+    if (value == null || value.isEmpty || !regex.hasMatch(value)) {
       return 'Enter a valid email address';
-    else {
+    } else {
       return null;
     }
   }
@@ -126,7 +130,7 @@ class _HelpSupportState extends State<HelpSupport> {
                     }),
                     validator: (value) {
                       if (!(value!.length > 10) && value.isNotEmpty) {
-                        return "Enter valid query of more then 10 characters!";
+                        return "Enter valid query of more than 10 characters!";
                       }
                       return null;
                     },
