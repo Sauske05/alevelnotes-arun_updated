@@ -1,10 +1,5 @@
 import 'package:playstore_app/datas/account_menu_json.dart';
-import 'package:playstore_app/screens/SyllabusScreen.dart';
-import 'package:playstore_app/theme/colors.dart';
-import 'package:playstore_app/theme/padding.dart';
-import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
-import 'package:playstore_app/uiwidgets/custom_place_holder_contact_support.dart';
-import 'package:playstore_app/uiwidgets/custom_title.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
@@ -32,12 +27,11 @@ class AboutUsState extends State<AboutUs> {
             // ? Color.fromARGB(255, 62, 61, 61)
             ? const Color.fromARGB(255, 62, 61, 61)
             : Colors.blue.shade600;
-    final textWhite =
+ final textWhite =
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             // ? Color.fromARGB(255, 62, 61, 61)
             ? const Color.fromARGB(227, 56, 53, 53)
             : const Color(0xFFFFFFFF);
-
     return Scaffold(
       backgroundColor: textWhite,
       extendBodyBehindAppBar: true,
@@ -59,23 +53,31 @@ class AboutUsState extends State<AboutUs> {
 
     return SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(18, 100, 20, 20),
-        child: Column(children:const [
+        child: Column(children: [
           Text(
             'Shishir \n"Hi, i am jdsh dshg dkjdsh fsdff sd djkhs sadhfdsahf asdhfsd dhglsd gsdh "',
             style: TextStyle(
                 fontSize: 17,
-                backgroundColor: Color.fromARGB(255, 245, 245, 245),
+                backgroundColor: Provider.of<ThemeProvider>(context).themeMode ==
+                            ThemeMode.dark
+                        // ? Color.fromARGB(255, 62, 61, 61)
+                        ? const Color.fromARGB(227, 83, 83, 83)
+                        : Color.fromARGB(255, 229, 229, 229),
                 letterSpacing: 0.9),
             textAlign: TextAlign.justify,
           ),
-           SizedBox(
+          const SizedBox(
               height: 30,
             ),
           Text(
             'Arun \n"this this this that tht thatfasdlhfa asdljhkjsda hasljdhlak dsajdshgdsjh"',
             style: TextStyle(
                 fontSize: 17,
-                backgroundColor: Color.fromARGB(255, 245, 245, 245),
+                backgroundColor: Provider.of<ThemeProvider>(context).themeMode ==
+                            ThemeMode.dark
+                        // ? Color.fromARGB(255, 62, 61, 61)
+                        ? const Color.fromARGB(227, 83, 83, 83)
+                        : Color.fromARGB(255, 229, 229, 229),
                 letterSpacing: 0.9),
             textAlign: TextAlign.justify,
           )

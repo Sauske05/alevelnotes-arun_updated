@@ -22,16 +22,18 @@ class CustomHeading extends StatelessWidget {
           title,
           style: TextStyle(
             color: color,
-            fontSize: 24,
-            fontWeight: FontWeight.w700,
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+            fontStyle: FontStyle.italic
           ),
         ),
-        const SizedBox(height: 5.0),
+        const SizedBox(height: 3.0),
         Text(
           subTitle,
           style: TextStyle(
             color: color,
             fontSize: 16.0,
+            fontStyle: FontStyle.italic
           ),
         ),
       ],

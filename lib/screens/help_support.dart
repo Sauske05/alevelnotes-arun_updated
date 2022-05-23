@@ -137,7 +137,7 @@ class _HelpSupportState extends State<HelpSupport> {
                       onPressed: () {
                         _saveform();
                       },
-                      child: const Text('Sumbit')),
+                      child: const Text('Submit')),
                 )
               ],
             )),
