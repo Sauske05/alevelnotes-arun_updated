@@ -38,7 +38,15 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50),
         child: AppBar(
-          title: const Text('alevelNotes'),
+          centerTitle: true,
+          leading: IconButton(
+            onPressed: () {},
+            icon: Image.asset('assets/images/playstore.png'),
+          ),
+          title: const Text(
+            'AlevelNotes',
+            style: TextStyle(fontSize: 24,letterSpacing:1),
+          ),
           actions: [ChangeThemeButtonWidget()],
           backgroundColor: appbarColor,
           elevation: 0.0,
@@ -81,8 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       //heading
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children:const [
-                           CustomHeading(
+                        children: const [
+                          CustomHeading(
                             title: 'Hi, learner !',
                             subTitle: 'Let\'s start learning.',
                             color: textWhite,
@@ -119,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const CustomPromotionCard(),
             const SizedBox(
-              height: spacer +5,
+              height: spacer + 5,
             ),
             // const CustomButtonBox(title: 'abc'),
             // const SizedBox(
