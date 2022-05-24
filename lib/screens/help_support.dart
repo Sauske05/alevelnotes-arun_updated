@@ -37,9 +37,23 @@ class _HelpSupportState extends State<HelpSupport> {
     _emailcontroller.clear();
     _querycontroller.clear();
 
-    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text(
-            'Your response has been recorded. We will get back to you soon enough.')));
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: const Text('Response Recorded!'),
+            content: const Text(
+                'Your response has been recorded and we will get back to you shortly.'),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () => Navigator.pop(context, 'OK'),
+                child: const Text('OK'),
+              ),
+            ],
+          );
+        });
+    // ScaffoldMessenger.of(context).showSnackBar(
+    //     const SnackBar(content: Text('Your response has been recorded.')));
   }
 
   String? validateEmail(String? value) {

@@ -26,8 +26,8 @@ class _PDFcreatorState extends State<PDFcreator> {
       print(downloadURL);
       url = downloadURL;
       print(url);
-      setState(() {});
-    } on firebase_storage.FirebaseException catch (e) {
+      // setState(() {});
+    } on Exception catch (e) {
       print(e);
       return showDialog(
           context: context,
@@ -45,6 +45,7 @@ class _PDFcreatorState extends State<PDFcreator> {
                 ]);
           }));
     }
+    setState(() {});
   }
 
   Future<File?> downloadFile(String url) async {
@@ -65,6 +66,13 @@ class _PDFcreatorState extends State<PDFcreator> {
     super.initState();
     downloadURLExample();
     print('ALl DOne');
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    downloadURLExample();
   }
 
   @override

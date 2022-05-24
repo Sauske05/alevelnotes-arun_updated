@@ -2,7 +2,28 @@ import './listtile_module.dart';
 
 List<ListTilemodule> physicspdf = [
   ListTilemodule(Title: 'Physical Quantites', num: 1),
-  ListTilemodule(Title: 'citizenship', num: 2),
+  ListTilemodule(Title: 'Kinematics', num: 2),
+  ListTilemodule(Title: 'Dynamics', num: 3),
+  ListTilemodule(Title: 'Force, Density and Pressure', num: 4),
+  ListTilemodule(Title: 'Work, Energy and Power', num: 5),
+  ListTilemodule(Title: 'Deformation of Solids', num: 6),
+  ListTilemodule(Title: 'Waves', num: 7),
+  ListTilemodule(Title: 'Superposition', num: 8),
+  ListTilemodule(Title: 'Electricity', num: 9),
+  ListTilemodule(Title: 'Momentum', num: 10),
+  ListTilemodule(Title: 'Moment', num: 11),
+  ListTilemodule(Title: 'Particle Physics', num: 12),
+  ListTilemodule(Title: 'Circular Motion', num: 13),
+  ListTilemodule(Title: 'Electric Fields', num: 14),
+  ListTilemodule(Title: 'Gravitation', num: 15),
+  ListTilemodule(Title: 'Ideal Gases', num: 16),
+  ListTilemodule(Title: 'Capacitance', num: 17),
+  ListTilemodule(Title: 'Temperature', num: 18),
+  ListTilemodule(Title: 'Oscillation', num: 19),
+  ListTilemodule(Title: 'Magnetic Fields', num: 20),
+  ListTilemodule(Title: 'Alternating Current', num: 21),
+  ListTilemodule(Title: 'Nuclear Radiation', num: 22),
+  ListTilemodule(Title: 'Quantam Physics and Space', num: 23),
 ];
 
 List<ListTilemodule> mathpdf = [
