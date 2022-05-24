@@ -1,5 +1,3 @@
-import 'package:playstore_app/datas/account_menu_json.dart';
-
 import 'package:flutter/material.dart';
 
 import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
@@ -55,9 +53,9 @@ class AboutUsState extends State<AboutUs> {
         padding: const EdgeInsets.fromLTRB(18, 100, 20, 20),
         child: Column(children: [
           Text(
-            'Shishir \n"Hi, i am jdsh dshg dkjdsh fsdff sd djkhs sadhfdsahf asdhfsd dhglsd gsdh "',
+            'Shishir \n"Hi, I\'m Shishir. I am frontend developer for this app. I like building things. I am a High school graduate, Covid Connect Nepal Alumni, and the founder of <my_company/>. I am currently working with OlympEd, MathWorldNepal, and Engin."',
             style: TextStyle(
-                fontSize: 17,
+                fontSize: 18,
                 backgroundColor: Provider.of<ThemeProvider>(context).themeMode ==
                             ThemeMode.dark
                         // ? Color.fromARGB(255, 62, 61, 61)
@@ -67,12 +65,12 @@ class AboutUsState extends State<AboutUs> {
             textAlign: TextAlign.justify,
           ),
           const SizedBox(
-              height: 30,
+              height: 50,
             ),
           Text(
-            'Arun \n"this this this that tht thatfasdlhfa asdljhkjsda hasljdhlak dsajdshgdsjh"',
+            'Arun \n"Hi, I am Arun. I am Backend Developer for this app. Having recently graduated from Trinity Intl College, I am currently doing my internship at Robotics Association of Nepal(RAN). I excel at App development and Web development. I am also currently involved with Math World Nepal and Squad of Physics, Math, and Astronomy(SPAM)."',
             style: TextStyle(
-                fontSize: 17,
+                fontSize: 18,
                 backgroundColor: Provider.of<ThemeProvider>(context).themeMode ==
                             ThemeMode.dark
                         // ? Color.fromARGB(255, 62, 61, 61)

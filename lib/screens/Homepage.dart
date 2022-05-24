@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
 import 'package:playstore_app/uiwidgets/custom_place_holder_contact_support.dart';
 import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 import 'package:playstore_app/theme/colors.dart';
@@ -172,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // const SizedBox(
             //   height: spacer,
             // ),
-            const CustomPlaceHolderContactSupport(title: "Have a great day !"),
+            // const CustomPlaceHolderContactSupport(title: "Have a great day !"),
             // const SizedBox(
             //   height: spacer,
             // ),

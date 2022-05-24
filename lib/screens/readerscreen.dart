@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '/widgets/pdfcontroller.dart';
-import '../widgets/DownloadDialog.dart';
 
 class ReaderScreen extends StatefulWidget {
   // final String title;

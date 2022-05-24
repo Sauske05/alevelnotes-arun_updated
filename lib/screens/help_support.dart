@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
+import 'package:provider/provider.dart';
+
+import 'package:playstore_app/theme/theme_provider.dart';
 
 class HelpSupport extends StatefulWidget {
   const HelpSupport({super.key});
@@ -72,10 +76,23 @@ class _HelpSupportState extends State<HelpSupport> {
   final _formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+    final appbarColor =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            // ? Color.fromARGB(255, 62, 61, 61)
+            ? const Color.fromARGB(255, 62, 61, 61)
+            : Colors.blue.shade600;
+            final textWhite =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            // ? Color.fromARGB(255, 62, 61, 61)
+            ? const Color.fromARGB(227, 56, 53, 53)
+            : const Color(0xFFFFFFFF);
     return Scaffold(
+      backgroundColor: textWhite,
       appBar: AppBar(
         title: const Text('Help and Support'),
-        centerTitle: true,
+                  actions: [ChangeThemeButtonWidget()],
+                  backgroundColor: appbarColor,
+
       ),
       body: SingleChildScrollView(
         child: Form(

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 import '/models/dummylist.dart';
 import '/widgets/list_items.dart';
-import 'package:provider/provider.dart';
-import 'package:playstore_app/models/connectivity_provider.dart';
 
 class PhysicsScreen extends StatefulWidget {
   const PhysicsScreen({Key? key}) : super(key: key);
