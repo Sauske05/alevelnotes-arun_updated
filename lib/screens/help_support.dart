@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 import 'package:provider/provider.dart';
 
 import 'package:playstore_app/theme/theme_provider.dart';
@@ -89,7 +90,7 @@ class _HelpSupportState extends State<HelpSupport> {
       backgroundColor: textWhite,
       appBar: AppBar(
         title: const Text('Help and Support'),
-        centerTitle: true,
+                  actions: [ChangeThemeButtonWidget()],
                   backgroundColor: appbarColor,
 
       ),

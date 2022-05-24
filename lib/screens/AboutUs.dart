@@ -55,7 +55,7 @@ class AboutUsState extends State<AboutUs> {
           Text(
             'Shishir \n"Hi, I\'m Shishir. I am frontend developer for this app. I like building things. I am a High school graduate, Covid Connect Nepal Alumni, and the founder of <my_company/>. I am currently working with OlympEd, MathWorldNepal, and Engin."',
             style: TextStyle(
-                fontSize: 17,
+                fontSize: 18,
                 backgroundColor: Provider.of<ThemeProvider>(context).themeMode ==
                             ThemeMode.dark
                         // ? Color.fromARGB(255, 62, 61, 61)
@@ -65,12 +65,12 @@ class AboutUsState extends State<AboutUs> {
             textAlign: TextAlign.justify,
           ),
           const SizedBox(
-              height: 30,
+              height: 50,
             ),
           Text(
-            'Arun \n"Hi, I am Arun. I am the Backend Developer for this app. Having recently graduated from Trinity Intl College, I am currently doing my internship at Robotics Association of Nepal(RAN). I excel at App development and Web development. I am also currently involved with Math World Nepal and Squad of Physics, Math, and Astronomy(SPAM)"',
+            'Arun \n"Hi, I am Arun. I am Backend Developer for this app. Having recently graduated from Trinity Intl College, I am currently doing my internship at Robotics Association of Nepal(RAN). I excel at App development and Web development. I am also currently involved with Math World Nepal and Squad of Physics, Math, and Astronomy(SPAM)."',
             style: TextStyle(
-                fontSize: 17,
+                fontSize: 18,
                 backgroundColor: Provider.of<ThemeProvider>(context).themeMode ==
                             ThemeMode.dark
                         // ? Color.fromARGB(255, 62, 61, 61)

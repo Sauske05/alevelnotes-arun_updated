@@ -171,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // const SizedBox(
             //   height: spacer,
             // ),
-            const CustomPlaceHolderContactSupport(title: "Have a great day !"),
+            // const CustomPlaceHolderContactSupport(title: "Have a great day !"),
             // const SizedBox(
             //   height: spacer,
             // ),
