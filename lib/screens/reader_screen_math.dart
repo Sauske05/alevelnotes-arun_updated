@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '/widgets/pdf_creator_Math.dart';
-import '../widgets/DownloadDialog_Math.dart';
 
 class ReaderScreenMath extends StatefulWidget {
   // final String title;

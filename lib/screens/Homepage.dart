@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
 import 'package:playstore_app/uiwidgets/custom_place_holder_contact_support.dart';
 import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 import 'package:playstore_app/theme/colors.dart';

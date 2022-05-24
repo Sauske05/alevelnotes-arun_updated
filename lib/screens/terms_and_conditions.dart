@@ -1,18 +1,10 @@
-import 'package:playstore_app/datas/account_menu_json.dart';
-import 'package:playstore_app/screens/SyllabusScreen.dart';
-import 'package:playstore_app/theme/colors.dart';
-import 'package:playstore_app/theme/padding.dart';
-import 'package:playstore_app/uiwidgets/custom_place_holder.dart';
-import 'package:playstore_app/uiwidgets/custom_place_holder_contact_support.dart';
-import 'package:playstore_app/uiwidgets/custom_title.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 import 'package:playstore_app/theme/theme_provider.dart';
 import 'package:playstore_app/widgets/ChangeThemeButtonWidget.dart';
 
-import 'package:provider/provider.dart';
-import 'package:playstore_app/theme/theme_provider.dart';
 
 class TermsAndConditions extends StatefulWidget {
   const TermsAndConditions({Key? key}) : super(key: key);
