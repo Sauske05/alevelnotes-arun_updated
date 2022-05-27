@@ -10,10 +10,13 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:playstore_app/theme/theme_provider.dart';
 import 'package:playstore_app/root_app.dart';
 import './screens/reader_screen_math.dart';
+import 'package:flutter/services.dart';
 // import 'package:rate_my_app/rate_my_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   await Firebase.initializeApp();
   runApp(const MyApp());
 }

@@ -28,10 +28,6 @@ class _RootAppState extends State<RootApp> {
 
   @override
   Widget build(BuildContext context) {
-    // return Scaffold(
-    //   body: getBody(),
-    //   bottomNavigationBar: getFooter(),
-    // );
     return pageUI();
   }
 
@@ -147,7 +143,7 @@ class _RootAppState extends State<RootApp> {
                                     borderRadius: BorderRadius.circular(100)),
                               ),
                             )
-                          :const SizedBox(
+                          : const SizedBox(
                               height: 5.0,
                               width: 20.0,
                             ),
